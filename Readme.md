@@ -150,3 +150,4 @@ stash@{0}: WIP on main: d6ba385 progress
 ```
 ## challege 2: Retrieving Stashed Changes
 ```bash
+git stash -u
