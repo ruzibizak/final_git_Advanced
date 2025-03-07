@@ -141,3 +141,12 @@ user@k25130 MINGW64 /d/final_git_advanced ((188098c...))
 ## Part 3:Advanced Workflows (10+ Challenges)
 ## Challenge 1: Stashing Changes
 ```bash
+git stash -u                                                                                  
+Saved working directory and index state WIP on main: d6ba385 progress
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git stash list
+stash@{0}: WIP on main: d6ba385 progress
+```
+## challege 2: Retrieving Stashed Changes
+```bash
