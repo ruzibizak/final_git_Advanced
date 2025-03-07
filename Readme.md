@@ -95,5 +95,12 @@ Current branch main is up to date.
 ## Exercise 9:Renaming Branches
 ```bash
 
+git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
 
+user@k25130 MINGW64 /d/final_git_advanced (ft/new-branch-from-commit)
+$ git branch -m ft/new-branch-from-commit ft/improved-branch-name
+```
+## Checking Out Detached HEAD:
+```bash
 
