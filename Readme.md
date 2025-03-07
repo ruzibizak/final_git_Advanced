@@ -104,3 +104,37 @@ $ git branch -m ft/new-branch-from-commit ft/improved-branch-name
 ## Checking Out Detached HEAD:
 ```bash
 
+git checkout 188098c
+Note: switching to '188098c'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+Or undo this operation with:
+
+  git switch -
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 188098c Implemented test 5
+
+user@k25130 MINGW64 /d/final_git_advanced ((188098c...))
+```
