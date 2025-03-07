@@ -138,3 +138,6 @@ HEAD is now at 188098c Implemented test 5
 
 user@k25130 MINGW64 /d/final_git_advanced ((188098c...))
 ```
+## Part 3:Advanced Workflows (10+ Challenges)
+## Challenge 1: Stashing Changes
+```bash
