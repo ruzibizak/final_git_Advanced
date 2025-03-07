@@ -142,3 +142,178 @@ user@k25130 MINGW64 /d/final_git_advanced ((188098c...))
 ## Challenge 1: Stashing Changes
 ```bash
 git stash -u
+Saved working directory and index state WIP on main: d6ba385 progress
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git stash list
+stash@{0}: WIP on main: d6ba385 progress
+```
+##  Challenge 2 : Retrieving Stashed Changes:
+
+```bash
+git stash pop
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+  (use "git push" to publish your local commits)
+
+
+nothing to commit, working tree clean
+Dropped refs/stash@{0} (da817143d040e165a28ce46ce9c8be861c5789b0)
+```
+## Challenge 3: Branch Merging Conflicts (Continued)
+```bash
+git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ echo "This is a change on the main branch." > example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git add example.txt
+warning: in the working copy of 'example.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git commit -m "Update example.txt on main"
+[main a7f47e8] Update example.txt on main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git checkout feature-branch
+Switched to branch 'feature-branch'
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ echo "This is a change on the feature branch." > example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git add example.txt
+warning: in the working copy of 'example.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git commit -m "Update example.txt on feature-branch"
+[feature-branch c34a382] Update example.txt on feature-branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git commit -m "Update example.txt on feature-branch"
+[feature-branch c34a382] Update example.txt on feature-branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git merge feature-branch
+Auto-merging example.txt
+CONFLICT (add/add): Merge conflict in example.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@k25130 MINGW64 /d/final_git_advanced (main|MERGING)
+$ git add example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (main|MERGING)
+$ git commit -m "Resolved merge conflict between main and feature-branch"
+[main 3d1baaa] Resolved merge conflict between main and feature-branch
+
+git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ echo "This is a change on the main branch." > example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git add example.txt
+warning: in the working copy of 'example.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git commit -m "Update example.txt on main"
+[main a7f47e8] Update example.txt on main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git checkout feature-branch
+Switched to branch 'feature-branch'
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ echo "This is a change on the feature branch." > example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git add example.txt
+warning: in the working copy of 'example.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git commit -m "Update example.txt on feature-branch"
+[feature-branch c34a382] Update example.txt on feature-branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git commit -m "Update example.txt on feature-branch"
+[feature-branch c34a382] Update example.txt on feature-branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+user@k25130 MINGW64 /d/final_git_advanced (feature-branch)
+$ git checkout main
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git merge feature-branch
+Auto-merging example.txt
+CONFLICT (add/add): Merge conflict in example.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@k25130 MINGW64 /d/final_git_advanced (main|MERGING)
+$ git add example.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (main|MERGING)
+$ git commit -m "Resolved merge conflict between main and feature-branch"
+[main 3d1baaa] Resolved merge conflict between main and feature-branch
+
+```
+
+## challenge 4: Resolving Merge Conflicts with a Merge Tool
+```bash
