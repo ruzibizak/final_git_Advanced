@@ -84,3 +84,48 @@ $ git commit -m "Resolved merge conflicts and merged ft/new-branch-from-commit"
 ```
 ## Exercise 8:Branch Rebasing
 ```bash
+git fetch origin main
+From https://github.com/ruzibizak/final_git_Advanced
+ * branch            main       -> FETCH_HEAD
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git rebase main
+Current branch main is up to date.
+```
+## Exercise 9:Renaming Branches
+```bash
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git fetch origin main
+From https://github.com/ruzibizak/final_git_Advanced
+ * branch            main       -> FETCH_HEAD
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git rebase main
+Current branch main is up to date.
+
+$ git fetch origin main
+From https://github.com/ruzibizak/final_git_Advanced
+ * branch            main       -> FETCH_HEAD
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git rebase main
+Current branch main is up to date.
+
+ * branch            main       -> FETCH_HEAD
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git rebase main
+Current branch main is up to date.
+
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git rebase main
+Current branch main is up to date.
+
+Current branch main is up to date.
+
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$
+```
