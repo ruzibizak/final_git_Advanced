@@ -41,4 +41,19 @@ $ git branch -d ft/new-feature
 Deleted branch ft/new-feature (was 3e72e51).
 
 exercise 6: Creating a Branch from a Commit
+<<<<<<< HEAD
           
+=======
+         git checkout -b ft/new-branch-from-commit 3e72e51
+Switched to a new branch 'ft/new-branch-from-commit'
+
+user@k25130 MINGW64 /d/final_git_advanced (ft/new-branch-from-commit)
+$ git branch
+[main 8d5efd2] Updated Readme.md before switching branches
+ 1 file changed, 28 insertions(+)
+ .
+
+
+ exercise 7: Branch Merging
+ 
+>>>>>>> ft/new-branch-from-commit
