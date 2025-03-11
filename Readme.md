@@ -14,7 +14,7 @@ Switched to a new branch 'ft/new-feature'
 
  
   
-   ## exercise 2:Working on the Feature Branch
+   ## exercise 2:Working on the Feature Branches
    ```bash
              git add feature.txt
               git commit -m "Implemented core functionality for new feature"
