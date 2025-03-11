@@ -317,3 +317,126 @@ $ git commit -m "Resolved merge conflict between main and feature-branch"
 
 ## challenge 4: Resolving Merge Conflicts with a Merge Tool
 ```bash
+```
+## Challenge 5: Understanding Detached HEAD State
+```bash 
+git add .
+
+user@k25130 MINGW64 /d/final_git_advanced (Detached_Head)
+$ git commit -m "Your Detarched changes"
+[Detached_Head 9d8db37] Your Detarched changes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Detached.txt
+
+user@k25130 MINGW64 /d/final_git_advanced (Detached_Head)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git merge Detached_Head
+Updating 869c232..9d8db37
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git merge Detached_Head
+Updating 869c232..9d8db37
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git merge Detached_Head
+Updating 869c232..9d8db37
+Updating 869c232..9d8db37
+Fast-forward
+ Detached.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Detached.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Detached.txt
+
+```
+## challenge 6: Ignoring Files/Directories
+```bash
+ git add .gitignore
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git commit -m "Add .gitignore file to exclude unnecessary files"
+[main ce60855] Add .gitignore file to exclude unnecessary files
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+ git status --ignored
+On branch main
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        modified:   Readme.md
+
+Ignored files:
+  (use "git add -f <file>..." to include in what will be committed)
+        example.txt
+   ```
+## challenge 7: Working with Tags
+```bash
+git tag v1.0
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git tag
+v1.0
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git push origin v1.0
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (27/27), 3.09 KiB | 351.00 KiB/s, done.
+Total 27 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), done.
+To https://github.com/ruzibizak/final_git_Advanced.git
+ * [new tag]         v1.0 -> v1.0
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git show v1.0
+commit 7dd9b84d9a66a65aa4605880aafa862b6912d8d2 (HEAD -> main, tag: v1.0)
+Author: Your Name <you@example.com>
+Date:   Tue Mar 11 11:13:09 2025 +0200
+
+    Ignored example.txt
+
+diff --git a/example.txt b/example.txt
+deleted file mode 100644
+index 66936ce..0000000
+--- a/example.txt
++++ /dev/null
+@@ -1,2 +0,0 @@
+-Change from feature branch
+-Change from main branch
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+```
+## Challenge 8:Listing and Deleting Tags
+```bash
+git tag
+v1.0
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was 7dd9b84)
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git push origin --delete v1.0
+To https://github.com/ruzibizak/final_git_Advanced.git
+ - [deleted]         v1.0
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git tag
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+```
+
+## Challenge 9: Pushing Local Work to Remote Repositories
