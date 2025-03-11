@@ -439,7 +439,7 @@ $ git tag
 user@k25130 MINGW64 /d/final_git_advanced (main)
 ```
 
-## Challenge 9: Pushing Local Work to Remote Repositories
+## Challenge Exercise  9: Pushing Local Work to Remote Repositories main branch 
 
 ```bash
 git add .
