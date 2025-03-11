@@ -440,3 +440,26 @@ user@k25130 MINGW64 /d/final_git_advanced (main)
 ```
 
 ## Challenge 9: Pushing Local Work to Remote Repositories
+
+```bash
+git add .
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git commit -m "progress"
+[main c6501df] progress
+ 2 files changed, 126 insertions(+), 1 deletion(-)
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git push origin main 
+Enumerating objects: 37, done.
+Counting objects: 100% (37/37), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (31/31), 4.39 KiB | 224.00 KiB/s, done.
+Total 31 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 1 local object.
+To https://github.com/ruzibizak/final_git_Advanced.git
+   f470844..c6501df  main -> main
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+```
