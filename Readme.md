@@ -317,6 +317,16 @@ $ git commit -m "Resolved merge conflict between main and feature-branch"
 
 ## challenge 4: Resolving Merge Conflicts with a Merge Tool
 ```bash
+git checkout main
+Already on 'main'
+M       Readme.md
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+user@k25130 MINGW64 /d/final_git_advanced (main)
+$ git merge feature-branch
+Already up to date.
+
 ```
 ## Challenge 5: Understanding Detached HEAD State
 ```bash 
@@ -477,4 +487,4 @@ Fast-forward
  1 file changed, 1 insertion(+), 1 deletion(-)
  ```
  
-Local changes
+
