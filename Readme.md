@@ -463,3 +463,17 @@ To https://github.com/ruzibizak/final_git_Advanced.git
 
 user@k25130 MINGW64 /d/final_git_advanced (main)
 ```
+## challange 10: Pulling Changes from Remote Repositories
+```bash
+git pull origin main
+From https://github.com/ruzibizak/final_git_Advanced
+ * branch            main       -> FETCH_HEAD       
+Updating 6d66c1a..e102c9f
+Fast-forward
+ Readme.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ Readme.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ ```
+ 
